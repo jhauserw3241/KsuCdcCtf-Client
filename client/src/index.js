@@ -12,7 +12,9 @@ import registerServiceWorker from './registerServiceWorker';
 // You can choose your kind of history here (e.g. browserHistory)
 import { BrowserRouter } from 'react-router-dom';
 
-import { Header, Main } from './routes';
+import Header from './Header';
+
+import { Main } from './routes';
 
 const App = () => (
 	<div>

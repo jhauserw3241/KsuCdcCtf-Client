@@ -6,10 +6,6 @@ class Home extends Component {
   render() {
     return (
       <div className="Home">
-        <header className="Home-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="Home-title">Home</h1>
-        </header>
 		<main>
 			{this.props.children}
 		</main>
