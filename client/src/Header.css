@@ -9,9 +9,14 @@
 
 .Header-header {
   background-color: #222;
-  height: 150px;
-  padding: 20px;
+  /*padding: 20px;*/
   color: white;
+}
+
+nav.navbar.navbar-default {
+	background-color: #222;
+	border-color: #222;
+	color: white;
 }
 
 .Header-title {
@@ -22,7 +27,17 @@
   font-size: large;
 }
 
+.right-side-button{
+  float:right;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
