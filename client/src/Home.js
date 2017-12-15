@@ -10,7 +10,7 @@ class Home extends Component {
 			{this.props.children}
 		</main>
         <p className="Home-intro">
-          To get started, edit <code>src/Home.js</code> and save to reload.TEst
+          Home
         </p>
       </div>
     );

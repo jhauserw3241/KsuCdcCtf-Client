@@ -11,7 +11,7 @@ class About extends Component {
 			{this.props.children}
 		</main>
         <p className="About-intro">
-          To get started, edit <code>src/About.js</code> and save to reload.about
+          About
         </p>
       </div>
     );
