@@ -1,20 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
-import './index.css';
-import About from './About';
-import Home from './Home';
-import registerServiceWorker from './registerServiceWorker';
-
-/*ReactDOM.render(<App />, document.getElementById('root'));
-//ReactDOM.render(<Home />, document.getElementById('root'));*/
-
-
-// You can choose your kind of history here (e.g. browserHistory)
 import { BrowserRouter } from 'react-router-dom';
-
+import registerServiceWorker from './registerServiceWorker';
 import Header from './Header';
-
 import { Main } from './routes';
+import './index.css';
 
 const App = () => (
 	<div>
