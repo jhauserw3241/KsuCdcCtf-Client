@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Nav, NavItem } from 'react-bootstrap';
 import logo from './logo.svg';
 import './App.css';
-import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 function handleSelect(selectedKey) {
   alert(`selected ${selectedKey}`);
