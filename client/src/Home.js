@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Card from './Card';
 import logo from './logo.svg';
 
 class Home extends Component {
@@ -9,8 +10,12 @@ class Home extends Component {
 			{this.props.children}
 		</main>
         <p className="Home-intro">
-          Home
+          Logan was here
         </p>
+		<ul>
+			<Card />
+			<Card />
+		</ul>
       </div>
     );
   }
