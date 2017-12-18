@@ -23,7 +23,10 @@ class Home extends Component {
 				<h1>Users</h1>
 				<PanelGroup>
 					{this.state.challenges.map(challenge =>
-						<Panel collapsible header={challenge.name} eventKey="1">Answer:{challenge.answer} Clue:{challenge.clue}</Panel>
+						<Panel collapsible header={challenge.name} eventKey={challenge.id}>
+							Answer: {challenge.answer}<br/>
+							Clue: {challenge.clue}
+						</Panel>
 					)}
 				</PanelGroup>
 			</div>
