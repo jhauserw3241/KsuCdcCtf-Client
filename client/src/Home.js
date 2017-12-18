@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import Card from './Card';
+import { PanelGroup, Panel } from 'react-bootstrap';
 
 class Home extends Component {
-	state = {users: []}
+	state = {challenges: []}
 
 	componentDidMount() {
 		fetch('/users')
 		.then(res => res.json())
-		.then(users => this.setState({ users }));
+		.then(challenges => this.setState({ challenges }));
 	}
 	
 	render() {
@@ -19,15 +19,13 @@ class Home extends Component {
 				<p className="Home-intro">
 					Logan was here
 				</p>
-				<ul>
-					<Card />
-					<Card />
-				</ul>
 		
 				<h1>Users</h1>
-				{this.state.users.map(user =>
-					<div key={user.id}>{user.username}</div>
-				)}
+				<PanelGroup>
+					{this.state.challenges.map(challenge =>
+						<Panel collapsible header={challenge.name} eventKey="1">Answer:{challenge.answer} Clue:{challenge.clue}</Panel>
+					)}
+				</PanelGroup>
 			</div>
 		);
 	}
