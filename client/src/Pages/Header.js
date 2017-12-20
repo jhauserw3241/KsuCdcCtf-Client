@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
-import logo from './logo.svg';
-import './Header.css';
+import logo from './../logo.svg';
+import './../CSS/Header.css';
 
 class Header extends Component {
   render() {
