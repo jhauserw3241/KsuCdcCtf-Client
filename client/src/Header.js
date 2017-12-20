@@ -14,6 +14,7 @@ class Header extends Component {
 				</Navbar.Header>
 				<Nav bsStyle="pills">
 					<NavItem href="/scoreboard">Scoreboard</NavItem>
+					<NavItem href="/challenges">Challenges</NavItem>
 				</Nav>
 			</Navbar>
         </header>
