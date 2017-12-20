@@ -13,7 +13,6 @@ class Header extends Component {
 					<img src={logo} className="Header-logo" alt="logo" />
 				</Navbar.Header>
 				<Nav bsStyle="pills">
-					<NavItem href="/home">Home</NavItem>
 				</Nav>
 			</Navbar>
         </header>
