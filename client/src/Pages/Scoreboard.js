@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { PanelGroup, Panel } from 'react-bootstrap';
+import './cards.css';
 
 class Scoreboard extends Component {
 	state = {people: []}
@@ -20,13 +21,18 @@ class Scoreboard extends Component {
 					The scores for the participants of the KSU CDC CTF for Spring 2018 are below.
 				</p>
 
-				<PanelGroup>
+				<div className="card-container">
 					{this.state.people.map(person =>
-						<Panel collapsible header={person.name} eventKey={person.id}>
-							Score: {person.score}
-						</Panel>
+						<div className="card-score">
+							<div className="card-left">
+								{person.name}
+							</div>
+							<div className="card-right">
+								{person.score}
+							</div>
+						</div>
 					)}
-				</PanelGroup>
+				</div>
 			</div>
 		);
 	}
