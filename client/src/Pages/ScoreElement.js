@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './cards.css';
 
 class ScoreElement extends Component {
 	render() {

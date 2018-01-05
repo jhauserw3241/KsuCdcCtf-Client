@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ScoreElement from './ScoreElement';
 import NameElement from './NameElement';
-import './cards.css';
 
 class ScoreboardElement extends Component {
 	render() {

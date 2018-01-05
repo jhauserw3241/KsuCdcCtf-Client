@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ScoreboardElement from './ScoreboardElement';
-import './cards.css';
 
 class Scoreboard extends Component {
 	state = {people: []}
