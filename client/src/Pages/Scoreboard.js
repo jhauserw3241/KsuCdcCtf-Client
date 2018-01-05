@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ScoreElement from './ScoreElement';
+import NameElement from './NameElement';
 import './cards.css';
 
 class Scoreboard extends Component {
@@ -24,9 +25,7 @@ class Scoreboard extends Component {
 				<div className="card-container">
 					{this.state.people.map(person =>
 						<div className="card-score">
-							<div className="card-left">
-								{person.name}
-							</div>
+							<NameElement name={person.name} />
 							<ScoreElement score={person.score} />
 						</div>
 					)}

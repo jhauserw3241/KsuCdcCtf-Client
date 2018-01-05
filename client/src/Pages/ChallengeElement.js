@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NameElement from './NameElement';
 import FlagElement from './FlagElement';
 import ClueElement from './ClueElement';
 
@@ -24,9 +25,7 @@ class ChallengeElement extends Component {
 		return (
 			<div className="card">
 				<div className="card-header" onClick={this.toggleDetails}>
-					<div className="card-left">
-						{this.props.name}
-					</div>
+					<NameElement name={this.props.name} />
 				</div>
 				{expanded && (
 					<div className="card-details">
