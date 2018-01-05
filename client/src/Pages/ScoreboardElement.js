@@ -5,7 +5,7 @@ import NameElement from './NameElement';
 class ScoreboardElement extends Component {
 	render() {
 		return (
-			<div className="card-score">
+			<div className="card-main scorecard">
 				<NameElement name={this.props.name} />
 				<ScoreElement score={this.props.score} />
 			</div>

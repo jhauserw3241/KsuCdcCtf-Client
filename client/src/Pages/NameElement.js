@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class NameElement extends Component {
 	render() {
 		return (
-			<div className="card-left">
+			<div className="left">
 				{this.props.name}
 			</div>
 		);

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class ClueElement extends Component {
 	render() {
 		return (
-			<div className="card-left">
+			<div className="left">
 				Clue: {this.props.clue}
 			</div>
 		);

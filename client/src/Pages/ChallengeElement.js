@@ -24,7 +24,7 @@ class ChallengeElement extends Component {
 
 		return (
 			<div className="card">
-				<div className="card-header" onClick={this.toggleDetails}>
+				<div className="card-main challenge-card" onClick={this.toggleDetails}>
 					<NameElement name={this.props.name} />
 				</div>
 				{expanded && (

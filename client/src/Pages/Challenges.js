@@ -25,7 +25,7 @@ class Challenges extends Component {
 					This is the  information about how you are doing on each of the challenges.
 				</p>
 
-				<div className="card-container">
+				<div className="list-container">
 					{this.state.challenges.map(challenge =>
 						<ChallengeElement key={challenge.id} name={challenge.name} flag={challenge.answer} clue={challenge.clue} />
 					)}

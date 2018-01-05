@@ -15,7 +15,7 @@ class FlagElement extends Component {
 
 	render() {
 		return (
-			<div className="card-left">
+			<div className="left">
 				Flag:
 				<input type="text" value={this.props.flag} readOnly />
 				<Button onClick={()=>this.printTest()}>

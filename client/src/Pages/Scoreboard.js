@@ -20,7 +20,7 @@ class Scoreboard extends Component {
 					The scores for the participants of the KSU CDC CTF for Spring 2018 are below.
 				</p>
 
-				<div className="card-container">
+				<div className="list-container">
 					{this.state.people.map(person =>
 						<ScoreboardElement key={person.id} name={person.name} score={person.score} />
 					)}

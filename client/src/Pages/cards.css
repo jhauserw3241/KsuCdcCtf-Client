@@ -1,4 +1,4 @@
-.card-score {
+.card-main {
 	display: inline-block;
 	width: 100%;
 	padding-left: 5px;
@@ -6,31 +6,22 @@
 	padding-top: 5px;
 	margin-top: 10px;
 	padding-bottom: 5px;
-	margin-bottom: 10px;
 	background-color: gray;
 	border-color: black;
 	border-style: solid;
 	border-width: 1px;
-	border-radius: 8px;
 	color: white;
 }
 
-.card-header {
-	display: inline-block;
-	width: 100%;
-	padding-left: 5px;
-	padding-right: 5px;
-	padding-top: 5px;
-	margin-top: 10px;
-	padding-bottom: 5px;
-	background-color: gray;
-	border-color: black;
-	border-style: solid;
-	border-width: 1px;
+.scorecard {
+	margin-bottom: 10px;
+	border-radius: 8px;
+}
+
+.challenge-card {
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
 	border-bottom-left-radius: 8px;
-	color: white;
 }
 
 .card-details {
@@ -51,16 +42,16 @@
 	color: black;
 }
 
-.card-left {
+.left {
 	display: inline-block;
 }
 
-.card-right {
+.right {
 	display: inline-block;
 	float: right;
 }
 
-.card-container {
+.list-container {
 	width: 98.5%;
 	padding-left: 5px;
 	margin-left: 10px;
