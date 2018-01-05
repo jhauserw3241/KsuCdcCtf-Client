@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ScoreElement from './ScoreElement';
 import './cards.css';
 
 class Scoreboard extends Component {
@@ -26,9 +27,7 @@ class Scoreboard extends Component {
 							<div className="card-left">
 								{person.name}
 							</div>
-							<div className="card-right">
-								{person.score}
-							</div>
+							<ScoreElement score={person.score} />
 						</div>
 					)}
 				</div>
