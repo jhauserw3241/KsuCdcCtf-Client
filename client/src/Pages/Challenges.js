@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { PanelGroup, Panel, Button } from 'react-bootstrap';
+import FlagElement from './FlagElement';
 
 class Challenges extends Component {
 	constructor(props) {
@@ -47,13 +48,7 @@ class Challenges extends Component {
 							</div>
 							{opened && (
 								<div className="card-details">
-									<div className="card-left">
-										Flag:
-										<input type="text" defaultValue={challenge.answer} />
-										<Button>
-											Check
-										</Button>
-									</div>
+									<FlagElement flag={challenge.answer} />
 									<br/>
 									<div className="card-left">
 										Clue: {challenge.clue}
