@@ -18,8 +18,6 @@ class Challenges extends Component {
 	}
 
 	showDetails() {
-		console.log("State");
-		console.log(this.state);
 		const { opened } = this.state;
 		this.setState({
 			// toggle value of `opened`
