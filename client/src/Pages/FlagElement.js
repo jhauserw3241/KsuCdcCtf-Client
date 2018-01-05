@@ -8,7 +8,7 @@ class FlagElement extends Component {
 	
 	sendFlagToServer = (item) => (event) => {
 		console.log("Sending flag to server");
-		console.log("userId: " + "test");
+		console.log("userId: test");
 		console.log("challengeId: " + item.id);
 		console.log("flag: " + item.answer);
 	}

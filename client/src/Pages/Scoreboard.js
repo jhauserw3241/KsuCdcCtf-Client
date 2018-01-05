@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { PanelGroup, Panel } from 'react-bootstrap';
 import './cards.css';
 
 class Scoreboard extends Component {
