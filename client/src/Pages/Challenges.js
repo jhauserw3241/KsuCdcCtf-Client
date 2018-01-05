@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { PanelGroup, Panel, Button } from 'react-bootstrap';
 import ChallengeElement from './ChallengeElement';
 
 class Challenges extends Component {
@@ -17,8 +16,6 @@ class Challenges extends Component {
 	}
 
 	render() {
-		const { opened } = this.state;
-
 		return (
 			<div className="Challenges">
 				<main>
@@ -30,7 +27,7 @@ class Challenges extends Component {
 
 				<div className="card-container">
 					{this.state.challenges.map(challenge =>
-						<ChallengeElement name={challenge.name} flag={challenge.flag} clue={challenge.clue} />
+						<ChallengeElement name={challenge.name} flag={challenge.answer} clue={challenge.clue} />
 					)}
 				</div>
 			</div>
