@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { PanelGroup, Panel, Button } from 'react-bootstrap';
 import FlagElement from './FlagElement';
+import ClueElement from './ClueElement';
 
 class Challenges extends Component {
 	constructor(props) {
@@ -50,9 +51,7 @@ class Challenges extends Component {
 								<div className="card-details">
 									<FlagElement flag={challenge.answer} />
 									<br/>
-									<div className="card-left">
-										Clue: {challenge.clue}
-									</div>
+									<ClueElement clue={challenge.clue} />
 								</div>
 							)}
 						</div>
