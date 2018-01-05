@@ -27,7 +27,7 @@ class Challenges extends Component {
 
 				<div className="card-container">
 					{this.state.challenges.map(challenge =>
-						<ChallengeElement name={challenge.name} flag={challenge.answer} clue={challenge.clue} />
+						<ChallengeElement key={challenge.id} name={challenge.name} flag={challenge.answer} clue={challenge.clue} />
 					)}
 				</div>
 			</div>
