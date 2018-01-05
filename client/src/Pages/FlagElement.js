@@ -5,6 +5,13 @@ class FlagElement extends Component {
 	printTest() {
 		console.log("test");
 	}
+	
+	sendFlagToServer = (item) => (event) => {
+		console.log("Sending flag to server");
+		console.log("userId: " + "test");
+		console.log("challengeId: " + item.id);
+		console.log("flag: " + item.answer);
+	}
 
 	render() {
 		return (
