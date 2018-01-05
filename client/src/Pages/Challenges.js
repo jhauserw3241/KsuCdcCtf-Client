@@ -1,30 +1,19 @@
 import React, { Component } from 'react';
 import { PanelGroup, Panel, Button } from 'react-bootstrap';
-import FlagElement from './FlagElement';
-import ClueElement from './ClueElement';
+import ChallengeElement from './ChallengeElement';
 
 class Challenges extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			opened: false,
 			challenges: []
 		};
-		this.showDetails = this.showDetails.bind(this);
 	}
 
 	componentDidMount() {
 		fetch('/challenges')
 		.then(res => res.json())
 		.then(challenges => this.setState({ challenges }));
-	}
-
-	showDetails() {
-		const { opened } = this.state;
-		this.setState({
-			// toggle value of `opened`
-			opened: !opened,
-		});
 	}
 
 	render() {
@@ -41,20 +30,7 @@ class Challenges extends Component {
 
 				<div className="card-container">
 					{this.state.challenges.map(challenge =>
-						<div className="card">
-							<div className="card-header" onClick={this.showDetails}>
-								<div className="card-left">
-									{challenge.name}
-								</div>
-							</div>
-							{opened && (
-								<div className="card-details">
-									<FlagElement flag={challenge.answer} />
-									<br/>
-									<ClueElement clue={challenge.clue} />
-								</div>
-							)}
-						</div>
+						<ChallengeElement name={challenge.name} flag={challenge.flag} clue={challenge.clue} />
 					)}
 				</div>
 			</div>
