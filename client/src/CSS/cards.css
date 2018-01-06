@@ -10,18 +10,15 @@
 	border-color: black;
 	border-style: solid;
 	border-width: 1px;
+	border-radius: 8px;
 	color: white;
 }
 
 .scorecard {
 	margin-bottom: 10px;
-	border-radius: 8px;
 }
 
 .challenge-card {
-	border-top-left-radius: 8px;
-	border-top-right-radius: 8px;
-	border-bottom-left-radius: 8px;
 }
 
 .card-details {
