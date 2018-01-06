@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ScoreElement from './ScoreElement';
-import NameElement from './NameElement';
+import NameElement from './../Shared/NameElement';
 
 class ScoreboardElement extends Component {
 	render() {

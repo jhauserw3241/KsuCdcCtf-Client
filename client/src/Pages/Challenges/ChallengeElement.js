@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NameElement from './NameElement';
+import NameElement from './../Shared/NameElement';
 import FlagElement from './FlagElement';
 import ClueElement from './ClueElement';
 

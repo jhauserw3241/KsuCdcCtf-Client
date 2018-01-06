@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Scoreboard from './Pages/Scoreboard';
-import Challenges from './Pages/Challenges';
+import Scoreboard from './Pages/Scoreboard/Scoreboard';
+import Challenges from './Pages/Challenges/Challenges';
 
 export const Main = () => (
 	<main>
