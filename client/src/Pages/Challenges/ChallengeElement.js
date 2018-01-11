@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NameElement from './../Shared/NameElement';
+import StatusElement from './StatusElement';
 import FlagElement from './FlagElement';
 import ClueElement from './ClueElement';
 
@@ -21,21 +22,72 @@ class ChallengeElement extends Component {
 
 	render() {
 		const { expanded } = this.state;
-
-		return (
-			<div className="card">
-				<div className="card-main challenge-card" onClick={this.toggleDetails}>
-					<NameElement name={this.props.name} />
-				</div>
-				{expanded && (
-					<div className="card-details">
-						<FlagElement flag={this.props.flag} />
-						<br/>
-						<ClueElement clue={this.props.clue} />
+		
+		if(this.props.cstatus == "Done") {
+			return (
+				<div className="card">
+					<div className="card-main challenge-card" onClick={this.toggleDetails}>
+						<NameElement name={this.props.name} />
+						<StatusElement cstatus={this.props.cstatus} />
 					</div>
-				)}
-			</div>
-		);
+					{expanded && (
+						<div className="card-details">
+					<FlagElement id={this.key} flag={this.props.flag} readonly={true} />
+							<br/>
+							<ClueElement clue={this.props.clue} />
+						</div>
+					)}
+				</div>
+			);
+		}
+		else if (this.props.cstatus == "In Progress") {
+			return (
+				<div className="card">
+					<div className="card-main challenge-card" onClick={this.toggleDetails}>
+						<NameElement name={this.props.name} />
+						<StatusElement cstatus={this.props.cstatus} />
+					</div>
+					{expanded && (
+						<div className="card-details">
+							<FlagElement id={this.key} flag={this.props.flag} readonly={false} />
+							<br/>
+							<ClueElement clue={this.props.clue} />
+						</div>
+					)}
+				</div>
+			);
+		}
+		else if (this.props.cstatus == "Not Started") {
+			return (
+				<div className="card">
+					<div className="card-main challenge-card" onClick={this.toggleDetails}>
+						<NameElement name={this.props.name} />
+						<StatusElement cstatus={this.props.cstatus} />
+					</div>
+					{expanded && (
+						<div className="card-details">
+							<FlagElement id={this.key} flag={this.props.flag} readonly={true} />
+							<br/>
+							<ClueElement clue={this.props.clue} />
+						</div>
+					)}
+				</div>
+			);
+		}
+		else {
+			return (
+				<div className="card">
+					<div className="card-main challenge-card" onClick={this.toggleDetails}>
+						Something went wrong
+					</div>
+					{expanded && (
+						<div className="card-details">
+							Invalid challenge status was received
+						</div>
+					)}
+				</div>
+			);
+		}
 	}
 }
 
