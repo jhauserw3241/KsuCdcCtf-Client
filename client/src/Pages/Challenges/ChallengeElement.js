@@ -23,7 +23,7 @@ class ChallengeElement extends Component {
 	render() {
 		const { expanded } = this.state;
 		
-		if(this.props.cstatus == "Done") {
+		if(this.props.cstatus === "Done") {
 			return (
 				<div className="card">
 					<div className="card-main challenge-card" onClick={this.toggleDetails}>
@@ -40,7 +40,7 @@ class ChallengeElement extends Component {
 				</div>
 			);
 		}
-		else if (this.props.cstatus == "In Progress") {
+		else if (this.props.cstatus === "In Progress") {
 			return (
 				<div className="card">
 					<div className="card-main challenge-card" onClick={this.toggleDetails}>
@@ -57,7 +57,7 @@ class ChallengeElement extends Component {
 				</div>
 			);
 		}
-		else if (this.props.cstatus == "Not Started") {
+		else if (this.props.cstatus === "Not Started") {
 			return (
 				<div className="card">
 					<div className="card-main challenge-card" onClick={this.toggleDetails}>

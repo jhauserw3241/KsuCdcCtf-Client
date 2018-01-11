@@ -18,7 +18,7 @@ class FlagElement extends Component {
 	}
 
 	render() {
-		if(this.props.readonly == true) {
+		if(this.props.readonly) {
 			return (
 				<div className="left">
 					Flag:
