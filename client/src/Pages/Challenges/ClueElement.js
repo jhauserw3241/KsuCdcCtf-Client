@@ -4,7 +4,7 @@ class ClueElement extends Component {
 	render() {
 		return (
 			<div className="left">
-				Clue: {this.props.clue}
+				Clue for next challenge: {this.props.clue}
 			</div>
 		);
 	}
