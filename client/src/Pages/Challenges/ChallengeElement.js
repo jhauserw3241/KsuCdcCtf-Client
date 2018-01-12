@@ -57,23 +57,6 @@ class ChallengeElement extends Component {
 				</div>
 			);
 		}
-		else if (this.props.cstatus === "Not Started") {
-			return (
-				<div className="card">
-					<div className="card-main challenge-card" onClick={this.toggleDetails}>
-						<NameElement name={this.props.name} />
-						<StatusElement cstatus={this.props.cstatus} />
-					</div>
-					{expanded && (
-						<div className="card-details">
-							<FlagElement id={this.key} flag={this.props.flag} readonly={true} />
-							<br/>
-							<ClueElement clue={this.props.clue} />
-						</div>
-					)}
-				</div>
-			);
-		}
 		else {
 			return (
 				<div className="card">
