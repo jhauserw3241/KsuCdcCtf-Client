@@ -32,8 +32,6 @@ class ChallengeElement extends Component {
 					</div>
 					{expanded && (
 						<div className="card-details">
-					<FlagElement id={this.key} flag={this.props.flag} readonly={true} />
-							<br/>
 							<ClueElement clue={this.props.clue} />
 						</div>
 					)}
@@ -49,9 +47,7 @@ class ChallengeElement extends Component {
 					</div>
 					{expanded && (
 						<div className="card-details">
-							<FlagElement id={this.key} flag={this.props.flag} readonly={false} />
-							<br/>
-							<ClueElement clue={this.props.clue} />
+							<FlagElement id={this.props.id} flag={this.props.flag} flagHandler={this.props.flagHandler} />
 						</div>
 					)}
 				</div>

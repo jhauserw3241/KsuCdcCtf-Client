@@ -8,6 +8,15 @@ class Challenges extends Component {
 			challenges: []
 		};
 	}
+	
+	refreshChallenges(e) {
+		//e.preventDefault();
+		console.log("Refresh all challenges");
+		
+		fetch('/challenges')
+		.then(res => res.json())
+		.then(challenges => this.setState({ challenges }));
+	}
 
 	componentDidMount() {
 		fetch('/challenges')
@@ -27,7 +36,7 @@ class Challenges extends Component {
 
 				<div className="list-container">
 					{this.state.challenges.map(challenge =>
-						<ChallengeElement key={challenge.id} name={challenge.name} flag={challenge.answer} clue={challenge.clue} cstatus={challenge.cstatus} />
+						<ChallengeElement key={challenge.id} id={challenge.id} name={challenge.name} flag={challenge.answer} flagHandler={this.refreshChallenges.bind(this)} clue={challenge.clue} cstatus={challenge.cstatus} />
 					)}
 				</div>
 			</div>
