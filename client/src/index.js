@@ -5,7 +5,7 @@ import registerServiceWorker from './registerServiceWorker';
 import Header from './Pages/Header';
 import { Main } from './routes';
 import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import './CSS/cards.css'
+import './CSS/Card.css'
 
 const App = () => (
 	<div>
