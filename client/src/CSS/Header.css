@@ -1,16 +1,16 @@
 .Header {
-  text-align: center;
+	text-align: center;
 }
 
 .Header-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+	animation: App-logo-spin infinite 20s linear;
+	height: 80px;
 }
 
 .Header-header {
-  background-color: #222;
-  /*padding: 20px;*/
-  color: white;
+	background-color: #222;
+	/*padding: 20px;*/
+	color: white;
 }
 
 nav.navbar.navbar-default {
@@ -20,24 +20,35 @@ nav.navbar.navbar-default {
 }
 
 .Header-title {
-  font-size: 1.5em;
+	font-size: 1.5em;
 }
 
 .Header-intro {
-  font-size: large;
+	font-size: large;
 }
 
 .right-side-button{
-  float:right;
+	float:right;
+}
+
+.navbar-header {
+	color: white;
+	padding: 25px;
+	font-size: 1.5em;
+}
+
+.nav-body {
+	float: right;
+	padding: 15px;
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
 }

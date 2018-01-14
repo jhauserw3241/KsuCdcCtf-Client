@@ -10,13 +10,15 @@ class Header extends Component {
         <header className="Header-header">
 			<Navbar>
 				<Navbar.Header>
-					<img src={logo} className="Header-logo" alt="logo" />
+					KSU CDC CTF
 				</Navbar.Header>
-				<Nav bsStyle="pills">
-					<NavItem href="/scoreboard">Scoreboard</NavItem>
-					<NavItem href="/challenges">Challenges</NavItem>
-					<NavItem href="/login">Login</NavItem>
-				</Nav>
+				<div className="nav-body">
+					<Nav bsStyle="pills">
+						<NavItem href="/scoreboard">Scoreboard</NavItem>
+						<NavItem href="/challenges">Challenges</NavItem>
+						<NavItem href="/login">Login</NavItem>
+					</Nav>
+				</div>
 			</Navbar>
         </header>
 		<main>
