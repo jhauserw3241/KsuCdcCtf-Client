@@ -6,7 +6,7 @@ class ScoreboardElement extends Component {
 	render() {
 		return (
 			<div className="card-main scorecard">
-				<NameElement name={this.props.name} />
+				<NameElement name={this.props.eid} />
 				<ScoreElement score={this.props.score} />
 			</div>
 		);

@@ -2,21 +2,19 @@
 	text-align: center;
 }
 
-.Header-logo {
-	animation: App-logo-spin infinite 20s linear;
-	height: 80px;
-}
-
 .Header-header {
-	background-color: #222;
-	/*padding: 20px;*/
 	color: white;
 }
 
 nav.navbar.navbar-default {
-	background-color: #222;
-	border-color: #222;
-	color: white;
+	background-color: #222629;
+	border-color: #222629;
+}
+
+.navbar-header {
+	color: #6B6E70;
+	padding: 25px;
+	font-size: 1.5em;
 }
 
 .Header-title {
@@ -31,20 +29,9 @@ nav.navbar.navbar-default {
 	float:right;
 }
 
-.navbar-header {
-	color: white;
-	padding: 25px;
-	font-size: 1.5em;
-}
-
 .nav-body {
 	float: right;
 	padding: 15px;
-}
-
-@keyframes App-logo-spin {
-	from { transform: rotate(0deg); }
-	to { transform: rotate(360deg); }
 }
 
 body {
