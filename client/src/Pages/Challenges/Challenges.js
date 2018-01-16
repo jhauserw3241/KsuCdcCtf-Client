@@ -31,7 +31,7 @@ class Challenges extends Component {
 					{this.props.children}
 				</main>
 				<p className="Challenges-intro">
-					This is the  information about how you are doing on each of the challenges.
+					This is the information about how you are doing on each of the challenges.
 				</p>
 
 				<div className="list-container">
