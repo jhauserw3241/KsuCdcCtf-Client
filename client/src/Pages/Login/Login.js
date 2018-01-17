@@ -40,7 +40,7 @@ class Login extends Component {
 				<br/>
 				<div className="left form-row">
 					Password: 
-					<input type="text" value={this.state.password} onChange={(event) => {this.setState({password: event.target.value})}} />
+					<input type="password" value={this.state.password} onChange={(event) => {this.setState({password: event.target.value})}} />
 				</div>
 				<br/>
 				<Button className="left form-row submit-button" onClick={()=>this.login(this.state.username, this.state.password)}>
