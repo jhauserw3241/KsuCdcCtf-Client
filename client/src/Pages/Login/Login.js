@@ -15,7 +15,9 @@ class Login extends Component {
 		console.log("Username: " + this.state.username);
 		console.log("Password: " + this.state.password);
 		
-		fetch(`/login/${username}&${password}`)
+		fetch(`/login/${username}&${password}`, {
+			method: 'POST',
+			credentials: 'include'})
 		.then((response) => response.json())
 		.then((data) =>
 		{

@@ -14,7 +14,9 @@ class FlagElement extends Component {
 	}
 	
 	sendFlagToServer(user, id, flag) {
-		fetch(`/challenges/${user}&${id}&${flag}`)
+		fetch(`/challenges/${user}&${id}&${flag}`, {
+			method: 'POST',
+			credentials: 'include'})
 		.then((response) => response.json())
 		.then((data) =>
 		{

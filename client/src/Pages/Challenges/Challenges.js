@@ -13,13 +13,15 @@ class Challenges extends Component {
 		//e.preventDefault();
 		console.log("Refresh all challenges");
 		
-		fetch('/challenges')
+		fetch('/challenges', {
+			credentials: 'include'})
 		.then(res => res.json())
 		.then(challenges => this.setState({ challenges }));
 	}
 
 	componentDidMount() {
-		fetch('/challenges')
+		fetch('/challenges', {
+			credentials: 'include'})
 		.then(res => res.json())
 		.then(challenges => this.setState({ challenges }));
 	}
