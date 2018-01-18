@@ -28,7 +28,7 @@ class FlagElement extends Component {
 	render() {
 		return (
 			<div className="left">
-				Flag:
+        Flag:
 				<input type="text" value={this.state.flag} onChange={(event) => {this.setSetState({flag: event.target.value})}} />
 				<Button onClick={()=>this.sendFlagToServer("test", this.props.id, this.state.flag)}>
 					Check
