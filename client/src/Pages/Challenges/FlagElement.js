@@ -13,8 +13,8 @@ class FlagElement extends Component {
 		this.setState({flag: newProps.flag});
 	}
 	
-	sendFlagToServer(user, id, flag) {
-		fetch(`/challenges/${user}&${id}&${flag}`, {
+	sendFlagToServer(flag) {
+		fetch(`/submit/${flag}`, {
 			method: 'POST',
 			credentials: 'include'})
 		.then((response) => response.json())
@@ -29,8 +29,8 @@ class FlagElement extends Component {
 		return (
 			<div className="left">
         Flag:
-				<input type="text" value={this.state.flag} onChange={(event) => {this.setSetState({flag: event.target.value})}} />
-				<Button onClick={()=>this.sendFlagToServer("test", this.props.id, this.state.flag)}>
+				<input type="text" value={this.state.flag} onChange={(event) => {this.setState({flag: event.target.value})}} />
+				<Button onClick={()=>this.sendFlagToServer(this.state.flag)}>
 					Check
 				</Button>
 			</div>
