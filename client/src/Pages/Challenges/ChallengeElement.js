@@ -34,7 +34,8 @@ class ChallengeElement extends Component {
 		};
 
 		var inProgressStyle = {
-			backgroundColor: 'yellow'
+			backgroundColor: '#feb204',
+			color: 'black'
 		};
 		
 		if(this.props.cstatus === "Done") {
