@@ -29,10 +29,18 @@ class ChallengeElement extends Component {
 	render() {
 		const { expanded } = this.state;
 		
+		var doneStyle = {
+			backgroundColor: 'green'
+		};
+
+		var inProgressStyle = {
+			backgroundColor: 'yellow'
+		};
+		
 		if(this.props.cstatus === "Done") {
 			return (
 				<div className="card">
-					<div className="card-main challenge-card" onClick={this.toggleDetails}>
+					<div className="card-main challenge-card" onClick={this.toggleDetails} style={doneStyle} >
 						<NameElement name={this.props.name} />
 						<PointsElement name={this.props.name} points={this.props.points} />
 					</div>
@@ -47,7 +55,7 @@ class ChallengeElement extends Component {
 		else if (this.props.cstatus === "In Progress") {			
 			return (
 				<div className="card">
-					<div className="card-main challenge-card" onClick={this.toggleDetails}>
+					<div className="card-main challenge-card" onClick={this.toggleDetails} style={inProgressStyle} >
 						<NameElement name={this.props.name} />
 						<PointsElement name={this.props.name} points={this.props.points} />
 					</div>
