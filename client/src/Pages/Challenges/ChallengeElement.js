@@ -30,7 +30,7 @@ class ChallengeElement extends Component {
 		const { expanded } = this.state;
 		
 		var doneStyle = {
-			backgroundColor: 'green'
+			backgroundColor: '#40A045'
 		};
 
 		var inProgressStyle = {
