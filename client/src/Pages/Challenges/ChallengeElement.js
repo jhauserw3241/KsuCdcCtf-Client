@@ -7,9 +7,15 @@ import ClueElement from './ClueElement';
 class ChallengeElement extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			expanded: false
-		};
+		if(this.props.cstatus === "In Progress") {
+			this.state = {
+				expanded: true
+			};
+		} else {
+			this.state = {
+				expanded: false
+			};
+		}
 		this.toggleDetails = this.toggleDetails.bind(this);
 	}
 
@@ -22,8 +28,6 @@ class ChallengeElement extends Component {
 
 	render() {
 		const { expanded } = this.state;
-		console.log("Test");
-		console.log(this.props.points);
 		
 		if(this.props.cstatus === "Done") {
 			return (
@@ -40,7 +44,7 @@ class ChallengeElement extends Component {
 				</div>
 			);
 		}
-		else if (this.props.cstatus === "In Progress") {
+		else if (this.props.cstatus === "In Progress") {			
 			return (
 				<div className="card">
 					<div className="card-main challenge-card" onClick={this.toggleDetails}>
