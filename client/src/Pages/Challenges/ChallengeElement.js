@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import NameElement from './../Shared/NameElement';
-import StatusElement from './StatusElement';
+import PointsElement from './PointsElement';
 import FlagElement from './FlagElement';
 import ClueElement from './ClueElement';
 
@@ -22,13 +22,15 @@ class ChallengeElement extends Component {
 
 	render() {
 		const { expanded } = this.state;
+		console.log("Test");
+		console.log(this.props.points);
 		
 		if(this.props.cstatus === "Done") {
 			return (
 				<div className="card">
 					<div className="card-main challenge-card" onClick={this.toggleDetails}>
 						<NameElement name={this.props.name} />
-						<StatusElement cstatus={this.props.cstatus} />
+						<PointsElement name={this.props.name} points={this.props.points} />
 					</div>
 					{expanded && (
 						<div className="card-details">
@@ -43,7 +45,7 @@ class ChallengeElement extends Component {
 				<div className="card">
 					<div className="card-main challenge-card" onClick={this.toggleDetails}>
 						<NameElement name={this.props.name} />
-						<StatusElement cstatus={this.props.cstatus} />
+						<PointsElement name={this.props.name} points={this.props.points} />
 					</div>
 					{expanded && (
 						<div className="card-details">

@@ -38,7 +38,7 @@ class Challenges extends Component {
 
 				<div className="list-container">
 					{this.state.challenges.map(challenge =>
-						<ChallengeElement key={challenge.id} id={challenge.id} name={challenge.name} flagHandler={this.refreshChallenges.bind(this)} clue={challenge.clue} cstatus={challenge.cstatus} />
+						<ChallengeElement key={challenge.id} id={challenge.id} name={challenge.name} flagHandler={this.refreshChallenges.bind(this)} points={challenge.points} clue={challenge.clue} cstatus={challenge.cstatus} />
 					)}
 				</div>
 			</div>
