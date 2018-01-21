@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import  { Redirect } from 'react-router-dom';
+//import  { Redirect } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import './../../CSS/Login.css';
 
@@ -24,7 +24,7 @@ class Login extends Component {
 		{
 			console.log("Got response");
 			console.log(data.success);
-			<Redirect to={'/scoreboard'} />
+			//<Redirect to={'/scoreboard'} />
 		})
 	}
 	

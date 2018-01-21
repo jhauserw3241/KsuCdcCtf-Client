@@ -20,15 +20,16 @@ class FlagElement extends Component {
 		.then((response) => response.json())
 		.then((data) =>
 		{
-			console.log(data.cstatus);
-			this.props.flagHandler();
+			console.log(data.status);
+			console.log(data);
+			this.props.flagHandler(data.status);
 		})
 	}
 
 	render() {
 		return (
 			<div className="left">
-        Flag:
+				Flag:
 				<input type="text" value={this.state.flag} onChange={(event) => {this.setState({flag: event.target.value})}} />
 				<Button onClick={()=>this.sendFlagToServer(this.state.flag)}>
 					Check

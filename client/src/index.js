@@ -7,7 +7,7 @@ import { Main } from './routes';
 import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './CSS/Card.css';
 
-const fakeAuth = {
+/*const fakeAuth = {
 	isAuthenticated: false,
 	authenticate(cb) {
 		this.isAuthenticated = true
@@ -42,7 +42,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 			}} />
 		)
 	)}>
-)
+)*/
 
 const App = () => (
 	<div>
