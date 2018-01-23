@@ -1,63 +1,58 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { render } from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import registerServiceWorker from './registerServiceWorker';
 import Header from './Pages/Header';
 import { Main } from './routes';
-import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import './CSS/Card.css';
 
-const fakeAuth = {
-	isAuthenticated: false,
+////////////////////////////////////////////////////////////
+// 1. Click the public page
+// 2. Click the protected page
+// 3. Log in
+// 4. Click the back button, note the URL each time
+
+class AuthExample extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			isAuthenticated: false
+		};
+		
+		this.getAuthenticated = this.getAuthenticated.bind(this);
+		this.authenticate = this.authenticate.bind(this);
+		this.signout = this.signout.bind(this);
+	}
+	
+	getAuthenticated() {
+		return this.state.isAuthenticated;
+	}
+	
 	authenticate(cb) {
-		this.isAuthenticated = true
-		setTimeout(cb, 100) // fake async
-	},
+		this.setState({isAuthenticated:true});
+		setTimeout(cb, 100);
+	}
+
 	signout(cb) {
-		this.isAuthenticated = false
-		setTimeout(cb, 100)
+		this.setState({isAuthenticated: false});
+		setTimeout(cb, 100);
+	}
+
+	render() {
+		return (
+			<Router>
+				<div>
+					<Header isAuthenticated={this.state.isAuthenticated} />
+					<Main isAuthenticated={this.state.isAuthenticated} login={this.authenticate} signout={this.signout} />
+				</div>
+			</Router>
+		);
 	}
 }
 
-const AuthButton = withRouter(({history}) => (
-	fakeAuth.isAuthenticated ? (
-		<p>
-			Welcome! <button onClick={() => {
-				fakeAuth.signout(() => history.push('/'))
-			}}>Signout</button>
-		</p>
-	) : (
-		<p>You are not logged in.</p>
-	)
-))
-
-const PrivateRoute = ({ component: Component, ...rest }) => (
-	<Route {...rest} render={props => (
-		fakeAuth.isAuthenticated ? (
-			<Component {...props} />
-		) : (
-			<Redirect to={{
-				pathname: '/login',
-				state: { from: props.location }
-			}} />
-		)
-	)}>
-)
-
-const App = () => (
-	<div>
-		<Header />
-		<Main />
-	</div>
-)
+export default AuthExample
 
 render((
-	<BrowserRouter>
-		<div>
-			<App />
-		</div>
-	</BrowserRouter>),
+	<AuthExample />),
 	document.getElementById('root')
 );
 
-registerServiceWorker();
+//registerServiceWorker();

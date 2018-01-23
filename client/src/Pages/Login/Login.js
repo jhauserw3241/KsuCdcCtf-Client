@@ -8,15 +8,13 @@ class Login extends Component {
 		super(props);
 		this.state = {
 			username: "",
-			password: ""
+			password: "",
+			redirect: false
 		};
 	}
 
 	login(username, password) {
-		console.log("Username: " + this.state.username);
-		console.log("Password: " + this.state.password);
-		
-		fetch(`/login/${username}&${password}`, {
+		/*fetch(`/login/${username}&${password}`, {
 			method: 'POST',
 			credentials: 'include'})
 		.then((response) => response.json())
@@ -24,11 +22,25 @@ class Login extends Component {
 		{
 			console.log("Got response");
 			console.log(data.success);
-			<Redirect to={'/scoreboard'} />
-		})
+			//<Redirect to={'/scoreboard'} />
+			this.props.auth();
+		})*/
+		this.props.login(() => {
+			
+		});
+		
+		this.setState({ redirect: true });
 	}
 	
 	render() {
+		const { redirect } = this.state;
+
+		if (redirect) {
+			return (
+				<Redirect to={'/challenges'}/>
+			)
+		}
+		
 		return (
 			<div className="Login form-container">
 				<main>
