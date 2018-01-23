@@ -14,20 +14,7 @@ class Login extends Component {
 	}
 
 	login(username, password) {
-		/*fetch(`/login/${username}&${password}`, {
-			method: 'POST',
-			credentials: 'include'})
-		.then((response) => response.json())
-		.then((data) =>
-		{
-			console.log("Got response");
-			console.log(data.success);
-			//<Redirect to={'/scoreboard'} />
-			this.props.auth();
-		})*/
-		this.props.login(() => {
-			
-		});
+		this.props.login(username, password);
 		
 		this.setState({ redirect: true });
 	}
