@@ -8,17 +8,17 @@ class Header extends Component {
 		if(this.props.isAuthenticated) {
 			return (
 				<div className="Header">
-					<header className="Header-header">
-						<Navbar>
-							<Navbar.Header>
+					<header className="Header">
+						<div className="Navbar">
+							<div className="Header-header">
 								KSU CDC CTF
-							</Navbar.Header>
+							</div>
 							<div className="nav-body">
 								<NavLink to="/scoreboard">Scoreboard</NavLink>
 								<NavLink to="/challenges">Challenges</NavLink>
 								<NavLink to="/signout">Signout</NavLink>
 							</div>
-						</Navbar>
+						</div>
 					</header>
 					<main>
 						{this.props.children}
@@ -29,17 +29,16 @@ class Header extends Component {
 		else {
 			return (
 				<div className="Header">
-					<header className="Header-header">
-						<Navbar>
-							<Navbar.Header>
-								KSU CDC CTF
-							</Navbar.Header>
-							<div className="nav-body">
-								<NavLink to="/scoreboard">Scoreboard</NavLink>
-								<NavLink to="/login">Login</NavLink>
-							</div>
-						</Navbar>
-					</header>
+					<div className="Navbar">
+						<div className="Header-text">
+							KSU CDC CTF
+						</div>
+						<div className="nav-body">
+							<NavLink to="/scoreboard">Scoreboard</NavLink>
+							<NavLink to="/login">Login</NavLink>
+						</div>
+					</div>
+
 					<main>
 						{this.props.children}
 					</main>

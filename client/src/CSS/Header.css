@@ -1,21 +1,21 @@
 @import "Base.css";
 
-.Header {
+NavLink {
 	text-align: center;
 }
 
-.Header-header {
+/*.Header {
 	color: white;
-}
+}*/
 
-nav.navbar.navbar-default {
+.Header {
 	/*background-color: red;*/
 	background-color: var(--dark-gray);
 	border-color: var(--dark-gray);
 	color: white;
 }
 
-.navbar-header {
+.Header-text {
 	color: var(--light-purple);
 	padding: 10px;
 	font-size: 3em;
