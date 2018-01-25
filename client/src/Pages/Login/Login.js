@@ -18,6 +18,12 @@ class Login extends Component {
 		this.setState({ redirect: true });
 	}
 	
+	handleKeyPress = (event) => {
+		if(event.key === 'Enter'){
+			this.login(this.state.username, this.state.password);
+		}
+	}
+	
 	render() {
 		const { redirect } = this.state;
 
@@ -40,7 +46,7 @@ class Login extends Component {
 				<br/>
 				<div className="left form-row">
 					Password: 
-					<input type="password" value={this.state.password} onChange={(event) => {this.setState({password: event.target.value})}} />
+					<input type="password" value={this.state.password} onChange={(event) => {this.setState({password: event.target.value})}} onKeyPress={this.handleKeyPress} />
 				</div>
 				<br/>
 				<Button className="left form-row submit-button" onClick={()=>this.login(this.state.username, this.state.password)}>
