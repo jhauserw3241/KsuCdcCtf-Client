@@ -17,7 +17,10 @@ class Scoreboard extends Component {
 					{this.props.children}
 				</main>
 				<p className="Scoreboard-intro">
-					The scores for the participants of the KSU CDC CTF for Spring 2018 are below.
+					<center>
+						Check out the below ranking to see how you are doing
+						compared to your peers!
+					</center>
 				</p>
 
 				<div className="list-container">
