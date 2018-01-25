@@ -1,15 +1,6 @@
 @import "Base.css";
 
-NavLink {
-	text-align: center;
-}
-
-/*.Header {
-	color: white;
-}*/
-
 .Header {
-	/*background-color: red;*/
 	background-color: var(--dark-gray);
 	border-color: var(--dark-gray);
 	color: white;
@@ -20,27 +11,23 @@ NavLink {
 	padding: 10px;
 	font-size: 3em;
 	font-weight: bold;
-}
-
-.Header-title {
-	font-size: 1.5em;
-}
-
-.Header-intro {
-	font-size: large;
-}
-
-.right-side-button{
-	float:right;
+	display: inline-block;
 }
 
 .nav-body {
 	float: right;
-	padding: 15px;
 }
 
-a !important {
+.nav-link {
 	color: white;
+	padding: 1.5em !important;
+	display: inline-block !important;
+	text-decoration: none;
+}
+
+.nav-link:hover {
+	color: white;
+	background-color: black;
 }
 
 body {

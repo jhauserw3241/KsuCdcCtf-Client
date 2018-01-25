@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import './../CSS/Header.css';
 
@@ -8,18 +7,17 @@ class Header extends Component {
 		if(this.props.isAuthenticated) {
 			return (
 				<div className="Header">
-					<header className="Header">
-						<div className="Navbar">
-							<div className="Header-header">
-								KSU CDC CTF
-							</div>
-							<div className="nav-body">
-								<NavLink to="/scoreboard">Scoreboard</NavLink>
-								<NavLink to="/challenges">Challenges</NavLink>
-								<NavLink to="/signout">Signout</NavLink>
-							</div>
+					<div className="Navbar">
+						<div className="Header-text">
+							KSU CDC CTF
 						</div>
-					</header>
+						<div className="nav-body">
+							<NavLink to="/scoreboard" className="nav-link">Scoreboard</NavLink>
+							<NavLink to="/challenges" className="nav-link">Challenges</NavLink>
+							<NavLink to="/signout" className="nav-link">Signout</NavLink>
+						</div>
+					</div>
+
 					<main>
 						{this.props.children}
 					</main>
@@ -34,8 +32,8 @@ class Header extends Component {
 							KSU CDC CTF
 						</div>
 						<div className="nav-body">
-							<NavLink to="/scoreboard">Scoreboard</NavLink>
-							<NavLink to="/login">Login</NavLink>
+							<NavLink to="/scoreboard" className="nav-link">Scoreboard</NavLink>
+							<NavLink to="/login" className="nav-link">Login</NavLink>
 						</div>
 					</div>
 
