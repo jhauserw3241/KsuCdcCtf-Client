@@ -23,7 +23,7 @@ class Scoreboard extends Component {
 
 				<div className="list-container">
 					{this.state.people.map(person =>
-						<ScoreboardElement key={person.id} eid={person.eid} score={person.score} />
+						<ScoreboardElement key={person.eid} eid={person.eid} score={person.score} />
 					)}
 				</div>
 			</div>
