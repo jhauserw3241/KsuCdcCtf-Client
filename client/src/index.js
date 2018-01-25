@@ -3,6 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { render } from 'react-dom';
 import Header from './Pages/Header';
 import { Main } from './routes';
+import './CSS/Card.css';
 
 ////////////////////////////////////////////////////////////
 // 1. Click the public page

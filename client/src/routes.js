@@ -4,13 +4,13 @@ import {
 	Redirect,
 	Switch
 } from 'react-router-dom';
-//import Scoreboard from './Pages/Scoreboard/Scoreboard';
-//import Challenges from './Pages/Challenges/Challenges';
+import Scoreboard from './Pages/Scoreboard/Scoreboard';
+import Challenges from './Pages/Challenges/Challenges';
 import Login from './Pages/Login/Login';
 import Signout from './Pages/Signout/Signout';
 
-const Scoreboard = () => <h3>Scoreboard</h3>
-const Challenges = () => <h3>Challenges</h3>
+//const Scoreboard = () => <h3>Scoreboard</h3>
+//const Challenges = () => <h3>Challenges</h3>
 
 export class Main extends Component {	
 	render() {		
