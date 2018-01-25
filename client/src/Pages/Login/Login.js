@@ -9,8 +9,13 @@ class Login extends Component {
 		this.state = {
 			username: "",
 			password: "",
-			redirect: false
+			redirect: false,
+			allowEnterClick: false
 		};
+	}
+	
+	componentDidMount() {
+		this.setState({allowEnterClick: true});
 	}
 
 	login(username, password) {
@@ -19,7 +24,7 @@ class Login extends Component {
 	}
 	
 	handleKeyPress = (event) => {
-		if(event.key === 'Enter'){
+		if((this.state.allowEnterClick === true) && (event.key === 'Enter')){
 			this.login(this.state.username, this.state.password);
 		}
 	}
