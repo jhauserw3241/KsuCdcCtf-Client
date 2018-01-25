@@ -17,10 +17,8 @@ class Scoreboard extends Component {
 					{this.props.children}
 				</main>
 				<p className="Scoreboard-intro">
-					<center>
-						Check out the below ranking to see how you are doing
-						compared to your peers!
-					</center>
+					Check out the below ranking to see how you are doing
+					compared to your peers!
 				</p>
 
 				<div className="list-container">

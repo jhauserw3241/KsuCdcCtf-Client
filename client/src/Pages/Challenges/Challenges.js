@@ -42,13 +42,11 @@ class Challenges extends Component {
 					</main>
 					
 					<p className="Challenges-intro">
-						<center>
-							Welcome! Once you solve a challenge, enter the flag here to advance
-							to the next challenge.
-							<br />
-							If you get stuck, remember Logan is available for questions.
-							Good luck!
-						</center>
+						Welcome! Once you solve a challenge, enter the flag here to advance
+						to the next challenge.
+						<br />
+						If you get stuck, remember Logan is available for questions.
+						Good luck!
 					</p>
 
 					<div className="list-container">
