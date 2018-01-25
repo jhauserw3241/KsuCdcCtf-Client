@@ -1,63 +1,76 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { render } from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import registerServiceWorker from './registerServiceWorker';
 import Header from './Pages/Header';
 import { Main } from './routes';
-import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './CSS/Card.css';
 
-/*const fakeAuth = {
-	isAuthenticated: false,
-	authenticate(cb) {
-		this.isAuthenticated = true
-		setTimeout(cb, 100) // fake async
-	},
-	signout(cb) {
-		this.isAuthenticated = false
-		setTimeout(cb, 100)
+class Index extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			isAuthenticated: false
+		};
+
+		this.authenticate = this.authenticate.bind(this);
+		this.signout = this.signout.bind(this);
+	}
+	
+	attemptLogin(self, username, password) {
+		if((username !== "") && (password !== "")) {
+			fetch(`/login/${username}&${password}`, {
+				method: 'POST',
+				credentials: 'include'})
+			.then((response) => response.json())
+			.then((data) =>
+			{
+				if(data.success === "true") {
+					self.setState({isAuthenticated:true});
+				}
+			})
+		}
+	}
+	
+	authenticate(username, password) {
+		setTimeout(
+			this.attemptLogin(this, username, password),
+			100);
+	}
+	
+	attemptSignout(self) {
+		fetch(`/signout`, {
+			method: 'POST',
+			credentials: 'include'})
+		.then((response) => response.json())
+		.then((data) =>
+		{
+			if(data.success === "true") {
+				self.setState({isAuthenticated: false});
+			}
+		})
+	}
+
+	signout() {
+		setTimeout(this.attemptSignout(this), 100);
+	}
+
+	render() {
+		return (
+			<Router>
+				<div>
+					<Header isAuthenticated={this.state.isAuthenticated} />
+					<Main isAuthenticated={this.state.isAuthenticated} login={this.authenticate} signout={this.signout} />
+				</div>
+			</Router>
+		);
 	}
 }
 
-const AuthButton = withRouter(({history}) => (
-	fakeAuth.isAuthenticated ? (
-		<p>
-			Welcome! <button onClick={() => {
-				fakeAuth.signout(() => history.push('/'))
-			}}>Signout</button>
-		</p>
-	) : (
-		<p>You are not logged in.</p>
-	)
-))
-
-const PrivateRoute = ({ component: Component, ...rest }) => (
-	<Route {...rest} render={props => (
-		fakeAuth.isAuthenticated ? (
-			<Component {...props} />
-		) : (
-			<Redirect to={{
-				pathname: '/login',
-				state: { from: props.location }
-			}} />
-		)
-	)}>
-)*/
-
-const App = () => (
-	<div>
-		<Header />
-		<Main />
-	</div>
-)
+export default Index
 
 render((
-	<BrowserRouter>
-		<div>
-			<App />
-		</div>
-	</BrowserRouter>),
+	<Index />),
 	document.getElementById('root')
 );
 
-registerServiceWorker();
+//registerServiceWorker();

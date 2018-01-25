@@ -1,67 +1,42 @@
 import React, { Component } from 'react';
-import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 import './../CSS/Header.css';
 
 class Header extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			isLoggedIn: false
-		};
-	}
-	
-	/*getLoggedIn() {
-		fetch('/isloggedin', {
-			credentials: 'include'})
-		.then(res => res.json())
-		.then(isLoggedIn => this.setState({ isLoggedIn }));
-	}
-	
-	componentDidMount() {
-		getLoggedIn();
-	}*/
-	
 	render() {
-		const { isLoggedIn } = this.state;
-		
-		if(isLoggedIn) {
+		if(this.props.isAuthenticated) {
 			return (
 				<div className="Header">
-					<header className="Header-header">
-						<Navbar>
-							<Navbar.Header>
-								KSU CDC CTF
-							</Navbar.Header>
-							<div className="nav-body">
-							<Nav bsStyle="pills">
-								<NavItem href="/scoreboard" onClick={this.getLoggedIn}>Scoreboard</NavItem>
-								<NavItem href="/challenges" onClick={this.getLoggedIn}>Challenges</NavItem>
-								<NavItem href="/signout" onClick={this.getLoggedIn}>Signout</NavItem>
-							</Nav>
-							</div>
-						</Navbar>
-					</header>
+					<div className="Navbar">
+						<div className="Header-text">
+							KSU CDC CTF
+						</div>
+						<div className="nav-body">
+							<NavLink to="/scoreboard" className="nav-link">Scoreboard</NavLink>
+							<NavLink to="/challenges" className="nav-link">Challenges</NavLink>
+							<NavLink to="/signout" className="nav-link">Signout</NavLink>
+						</div>
+					</div>
+
 					<main>
 						{this.props.children}
 					</main>
 				</div>
 			);
-		} else {
+		}
+		else {
 			return (
 				<div className="Header">
-					<header className="Header-header">
-						<Navbar>
-							<Navbar.Header>
-								KSU CDC CTF
-							</Navbar.Header>
-							<div className="nav-body">
-							<Nav bsStyle="pills">
-								<NavItem href="/scoreboard" onClick={this.getLoggedIn}>Scoreboard</NavItem>
-								<NavItem href="/login" onClick={this.getLoggedIn}>Login</NavItem>
-							</Nav>
-							</div>
-						</Navbar>
-					</header>
+					<div className="Navbar">
+						<div className="Header-text">
+							KSU CDC CTF
+						</div>
+						<div className="nav-body">
+							<NavLink to="/scoreboard" className="nav-link">Scoreboard</NavLink>
+							<NavLink to="/login" className="nav-link">Login</NavLink>
+						</div>
+					</div>
+
 					<main>
 						{this.props.children}
 					</main>
