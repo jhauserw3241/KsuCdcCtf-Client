@@ -1,17 +1,25 @@
-.form-container {
+form {
 	position: fixed;
-	top: 50%;
-	left: 50%;
-	margin-top: -100px;
-	margin-left: -150px;
+	width: 300px;
+	top: calc(50% - 50px);
+	left: calc(50% - 250px);
 }
 
-.form-row {
-	padding: 7px;
-	float: right;
+fieldset {
+	border-width: 0px;
 }
 
-.submit-button {
-	margin-left: 40%;
-	float: left;
+label {
+    width: 100px;
+    clear: left;
+    text-align: right;
+    padding-right: 10px;
+}
+
+input, label {
+    float: left;
+}
+
+input[type=submit] {
+	margin-left: calc(50% - 10px);
 }

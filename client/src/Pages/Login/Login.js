@@ -44,19 +44,24 @@ class Login extends Component {
 					{this.props.children}
 				</main>
 				
-				<div className="left form-row">
-					Username: 
-					<input type="text" value={this.state.username} onChange={(event) => {this.setState({username: event.target.value})}} />
-				</div>
-				<br/>
-				<div className="left form-row">
-					Password: 
-					<input type="password" value={this.state.password} onChange={(event) => {this.setState({password: event.target.value})}} onKeyPress={this.handleKeyPress} />
-				</div>
-				<br/>
-				<Button className="left form-row submit-button" onClick={()=>this.login(this.state.username, this.state.password)}>
-					Submit
-				</Button>
+				<form onSubmit={()=>this.login(this.state.username, this.state.password)}>
+					<fieldset>
+						<label htmlFor="username">Username:</label>
+						<input
+							type="text"
+							name="username"
+							value={this.state.username} onChange={(event) => {this.setState({username: event.target.value})}} />
+					</fieldset>
+					<fieldset>
+						<label htmlFor="password">Password:</label>
+						<input
+							type="password"
+							name="password"
+							value={this.state.password} onChange={(event) => {this.setState({password: event.target.value})}}
+							onKeyPress={this.handleKeyPress} />
+					</fieldset>
+					<input type="submit" value="Submit" />
+				</form>
 			</div>
 		);
 	}
