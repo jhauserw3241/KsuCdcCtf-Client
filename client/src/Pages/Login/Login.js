@@ -44,7 +44,7 @@ class Login extends Component {
 					{this.props.children}
 				</main>
 				
-				<form onSubmit={()=>this.login(this.state.username, this.state.password)}>
+				<form method='POST' onSubmit={()=>this.login(this.state.username, this.state.password)}>
 					<fieldset>
 						<label htmlFor="username">Username:</label>
 						<input
