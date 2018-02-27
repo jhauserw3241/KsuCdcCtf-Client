@@ -35,15 +35,11 @@ class Login extends Component {
 		if (redirect) {
 			return (
 				<Redirect to={'/challenges'}/>
-			)
+			);
 		}
 		
 		return (
 			<div className="Login form-container">
-				<main>
-					{this.props.children}
-				</main>
-				
 				<form method='POST' onSubmit={()=>this.login(this.state.username, this.state.password)}>
 					<fieldset>
 						<label htmlFor="username">Username:</label>
@@ -62,6 +58,9 @@ class Login extends Component {
 					</fieldset>
 					<input type="submit" value="Submit" />
 				</form>
+				<main>
+					{this.props.children}
+				</main>
 			</div>
 		);
 	}
