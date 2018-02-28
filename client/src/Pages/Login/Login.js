@@ -40,7 +40,7 @@ class Login extends Component {
 		
 		return (
 			<div className="Login form-container">
-				<form method='POST' onSubmit={()=>this.login(this.state.username, this.state.password)}>
+				<form method='POST' className="login-form" onSubmit={()=>this.login(this.state.username, this.state.password)}>
 					<fieldset>
 						<label htmlFor="username">Username:</label>
 						<input
