@@ -3,6 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { render } from 'react-dom';
 import Header from './Pages/Header';
 import { Main } from './routes';
+import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './CSS/Card.css';
 
 class Index extends Component {
