@@ -6,10 +6,15 @@ class FlagElement extends Component {
 		this.state = {
 			flag: ""
 		}
+
+		this.sendFlagToServer = this.sendFlagToServer.bind(this);
 	}
 	
-	sendFlagToServer(flag) {
-		fetch(`/submit/${flag}`, {
+	sendFlagToServer() {
+		event.preventDefault();
+
+		// Submit flag to server
+		fetch(`/submit/${this.state.flag}`, {
 			method: 'POST',
 			credentials: 'include'})
 		.then((response) => response.json())
@@ -21,7 +26,7 @@ class FlagElement extends Component {
 
 	render() {
 		return (
-			<form>
+			<form methods="POST" onSubmit={this.sendFlagToServer}>
 				<fieldset>
 					<label htmlFor="flag">Flag:</label>
 					<input
@@ -30,9 +35,8 @@ class FlagElement extends Component {
 						onChange={(event) => {this.setState({flag: event.target.value})}} />
 					<input
 						className="flag-check-btn"
-						type="button"
-						value="Check"
-						onClick={()=>this.sendFlagToServer(this.state.flag)} />
+						type="submit"
+						value="Check" />
 				</fieldset>
 			</form>
 		);
