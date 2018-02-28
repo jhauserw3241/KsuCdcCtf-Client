@@ -79,6 +79,10 @@ html {
 	text-align: center;
 }
 
+.clue-txt {
+	margin-left: 12px;
+}
+
 .flag-check-btn {
 	padding: 2px;
 	margin-left: 10px;
