@@ -10,10 +10,13 @@ fieldset {
 }
 
 label {
-    width: 100px;
-    clear: left;
+	clear: left;
     text-align: right;
     padding-right: 10px;
+}
+
+.login-label {
+    width: 100px;
 }
 
 input, label {

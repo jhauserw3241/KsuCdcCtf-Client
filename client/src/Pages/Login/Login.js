@@ -42,14 +42,14 @@ class Login extends Component {
 			<div className="Login form-container">
 				<form method='POST' className="login-form" onSubmit={()=>this.login(this.state.username, this.state.password)}>
 					<fieldset>
-						<label htmlFor="username">Username:</label>
+						<label className="login-label" htmlFor="username">Username:</label>
 						<input
 							type="text"
 							name="username"
 							value={this.state.username} onChange={(event) => {this.setState({username: event.target.value})}} />
 					</fieldset>
 					<fieldset>
-						<label htmlFor="password">Password:</label>
+						<label className="login-label" htmlFor="password">Password:</label>
 						<input
 							type="password"
 							name="password"

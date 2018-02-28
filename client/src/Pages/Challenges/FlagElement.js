@@ -20,8 +20,6 @@ class FlagElement extends Component {
 		.then((response) => response.json())
 		.then((data) =>
 		{
-			console.log(data.status);
-			console.log(data);
 			this.props.flagHandler(data.status);
 		})
 	}
@@ -36,7 +34,11 @@ class FlagElement extends Component {
 						name="flag"
 						value={this.state.flag}
 						onChange={(event) => {this.setState({flag: event.target.value})}} />
-					<input type="button" value="Check" onClick={()=>this.sendFlagToServer(this.state.flag)} />
+					<input
+						className="flag-check-btn"
+						type="button"
+						value="Check"
+						onClick={()=>this.sendFlagToServer(this.state.flag)} />
 				</fieldset>
 			</form>
 		);
