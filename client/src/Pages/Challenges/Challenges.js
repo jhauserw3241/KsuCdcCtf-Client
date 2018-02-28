@@ -9,14 +9,14 @@ class Challenges extends Component {
 			challenges: [],
 			alertMsg: ""
 		};
+		this.handleFlag = this.handleFlag.bind(this);
 	}
 	
 	handleFlag(msg) {
+		console.log(msg);
 		this.setState({
 			alertMsg: msg,
 		});
-		
-		console.log("Refresh all challenges");
 		
 		fetch('/challenges', {
 			credentials: 'include'})
@@ -51,7 +51,7 @@ class Challenges extends Component {
 							key={challenge.id}
 							id={challenge.id}
 							name={challenge.name}
-							flagHandler={this.handleFlag.bind(this)}
+							flagHandler={this.handleFlag}
 							points={challenge.points}
 							clue={challenge.clue}
 							cstatus={challenge.cstatus} />
