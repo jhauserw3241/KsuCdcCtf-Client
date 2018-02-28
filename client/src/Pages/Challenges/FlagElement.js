@@ -28,13 +28,17 @@ class FlagElement extends Component {
 
 	render() {
 		return (
-			<div className="left">
-				Flag:
-				<input type="text" value={this.state.flag} onChange={(event) => {this.setState({flag: event.target.value})}} />
-				<Button onClick={()=>this.sendFlagToServer(this.state.flag)}>
-					Check
-				</Button>
-			</div>
+			<form>
+				<fieldset>
+					<label htmlFor="flag">Flag:</label>
+					<input
+						type="text"
+						name="flag"
+						value={this.state.flag}
+						onChange={(event) => {this.setState({flag: event.target.value})}} />
+					<input type="button" value="Check" onClick={()=>this.sendFlagToServer(this.state.flag)} />
+				</fieldset>
+			</form>
 		);
 	}
 }
