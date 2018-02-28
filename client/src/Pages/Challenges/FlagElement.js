@@ -28,7 +28,7 @@ class FlagElement extends Component {
 		return (
 			<form methods="POST" onSubmit={this.sendFlagToServer}>
 				<fieldset>
-					<label htmlFor="flag">Flag:</label>
+					<label className="flag-label" htmlFor="flag">Flag:</label>
 					<input
 						type="text"
 						name="flag"
