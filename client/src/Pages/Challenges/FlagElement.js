@@ -10,7 +10,7 @@ class FlagElement extends Component {
 		this.sendFlagToServer = this.sendFlagToServer.bind(this);
 	}
 	
-	sendFlagToServer() {
+	sendFlagToServer(event) {
 		event.preventDefault();
 
 		// Submit flag to server
