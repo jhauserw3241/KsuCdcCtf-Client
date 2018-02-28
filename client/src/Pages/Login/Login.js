@@ -55,7 +55,7 @@ class Login extends Component {
 							value={this.state.password} onChange={(event) => {this.setState({password: event.target.value})}}
 							onKeyPress={this.handleKeyPress} />
 					</fieldset>
-					<input type="submit" value="Submit" />
+					<input className="login-submit" type="submit" value="Submit" />
 				</form>
 				<main>
 					{this.props.children}

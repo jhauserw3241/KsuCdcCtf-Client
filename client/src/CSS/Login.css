@@ -23,6 +23,6 @@ input, label {
     float: left;
 }
 
-input[type=submit] {
+.login-submit {
 	margin-left: calc(50% - 10px);
 }
