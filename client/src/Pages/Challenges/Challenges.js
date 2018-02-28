@@ -13,7 +13,6 @@ class Challenges extends Component {
 	}
 	
 	handleFlag(msg) {
-		console.log(msg);
 		this.setState({
 			alertMsg: msg,
 		});
@@ -34,7 +33,7 @@ class Challenges extends Component {
 	render() {
 		return (
 			<div className="Challenges">				
-				{ (this.state.alertMsg === "") ?
+				{ (this.state.alertMsg !== "") ?
 					<ChallengeAlert status={this.state.alertMsg} /> : null }
 				
 				<p className="Challenges-intro">
