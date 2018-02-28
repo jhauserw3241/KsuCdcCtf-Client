@@ -27,9 +27,6 @@ class Scoreboard extends Component {
 
 		return (
 			<div className="Scoreboard">
-				<main>
-					{this.props.children}
-				</main>
 				<p className="Scoreboard-intro">
 					Check out the below ranking to see how you are doing
 					compared to your peers!
@@ -47,6 +44,10 @@ class Scoreboard extends Component {
 						)}
 					</div>
 				</div>
+
+				<main>
+					{this.props.children}
+				</main>
 			</div>
 		);
 	}
