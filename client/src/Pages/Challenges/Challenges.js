@@ -67,7 +67,11 @@ class Challenges extends Component {
 					<ChallengeAlert status={alertMsg} />
 					
 					<p className="Challenges-intro">
-						This is the information about how you are doing on each of the challenges.
+						Welcome! Once you solve a challenge, enter the flag here to advance
+						to the next challenge.
+						<br />
+						If you get stuck, remember Logan is available for questions.
+						Good luck!
 					</p>
 
 					<div className="list-container">
