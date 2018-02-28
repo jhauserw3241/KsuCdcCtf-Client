@@ -32,56 +32,37 @@ class Challenges extends Component {
 	}
 
 	render() {
-		const { alertMsg } = this.state;
-		
-		if(alertMsg === "") {
-			return (
-				<div className="Challenges">
-					<main>
-						{this.props.children}
-					</main>
-					
-					<p className="Challenges-intro">
-						Welcome! Once you solve a challenge, enter the flag here to advance
-						to the next challenge.
-						<br />
-						If you get stuck, remember Logan is available for questions.
-						Good luck!
-					</p>
+		return (
+			<div className="Challenges">				
+				{ (this.state.alertMsg === "") ?
+					<ChallengeAlert status={this.state.alertMsg} /> : null }
+				
+				<p className="Challenges-intro">
+					Welcome! Once you solve a challenge, enter the flag here to advance
+					to the next challenge.
+					<br />
+					If you get stuck, remember Logan is available for questions.
+					Good luck!
+				</p>
 
-					<div className="list-container">
-						{this.state.challenges.map(challenge =>
-							<ChallengeElement key={challenge.id} id={challenge.id} name={challenge.name} flagHandler={this.handleFlag.bind(this)} points={challenge.points} clue={challenge.clue} cstatus={challenge.cstatus} />
-						)}
-					</div>
+				<div className="list-container">
+					{this.state.challenges.map(challenge =>
+						<ChallengeElement
+							key={challenge.id}
+							id={challenge.id}
+							name={challenge.name}
+							flagHandler={this.handleFlag.bind(this)}
+							points={challenge.points}
+							clue={challenge.clue}
+							cstatus={challenge.cstatus} />
+					)}
 				</div>
-			);
-		}
-		else {
-			return (
-				<div className="Challenges">
-					<main>
-						{this.props.children}
-					</main>
-					
-					<ChallengeAlert status={alertMsg} />
-					
-					<p className="Challenges-intro">
-						Welcome! Once you solve a challenge, enter the flag here to advance
-						to the next challenge.
-						<br />
-						If you get stuck, remember Logan is available for questions.
-						Good luck!
-					</p>
 
-					<div className="list-container">
-						{this.state.challenges.map(challenge =>
-							<ChallengeElement key={challenge.id} id={challenge.id} name={challenge.name} flagHandler={this.handleFlag.bind(this)} points={challenge.points} clue={challenge.clue} cstatus={challenge.cstatus} />
-						)}
-					</div>
-				</div>
-			);
-		}
+				<main>
+					{this.props.children}
+				</main>
+			</div>
+		);
 	}
 }
 
