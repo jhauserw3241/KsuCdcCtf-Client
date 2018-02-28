@@ -35,7 +35,7 @@ class Scoreboard extends Component {
 					compared to your peers!
 				</p>
 
-				<div className="list-container">
+				<div className="list-container scoreboard-container">
 					<div className="list-column">
 						{first_half_people.map(person =>
 							<ScoreboardElement key={person.eid} eid={person.eid} score={person.score} />
