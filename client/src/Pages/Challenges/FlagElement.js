@@ -4,12 +4,8 @@ class FlagElement extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			flag: props.flag
+			flag: ""
 		}
-	}
-	
-	componentWillReceiveProps(newProps) {
-		this.setState({flag: newProps.flag});
 	}
 	
 	sendFlagToServer(flag) {
@@ -31,7 +27,6 @@ class FlagElement extends Component {
 					<input
 						type="text"
 						name="flag"
-						value={this.state.flag}
 						onChange={(event) => {this.setState({flag: event.target.value})}} />
 					<input
 						className="flag-check-btn"
