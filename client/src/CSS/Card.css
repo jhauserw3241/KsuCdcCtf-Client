@@ -87,3 +87,7 @@ html {
 	padding: 2px;
 	margin-left: 10px;
 }
+
+.alert-warning {
+	margin: 20px;
+}
