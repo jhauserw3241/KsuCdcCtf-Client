@@ -3,8 +3,6 @@ import { Alert } from 'react-bootstrap';
 
 class ChallengeAlert extends Component {
 	render() {
-		console.log(this.props.status);
-		
 		if(this.props.status === "Incorrect flag.") {
 			return (
 				<Alert bsStyle="warning">
